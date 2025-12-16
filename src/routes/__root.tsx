@@ -3,8 +3,6 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { ConvexReactClient } from 'convex/react'
 
-import Header from '../components/Header'
-
 import { ConvexAuthProvider } from "@convex-dev/auth/react";
 
 import appCss from '../styles.css?url'
@@ -45,7 +43,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ConvexAuthProvider client={convex}>
-          <Header />
           {children}
           <TanStackDevtools
             config={{
